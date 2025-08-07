@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="description" content="ThemeStation: Generating Theme-Aware 3D Assets from Few Exemplars">
+  <meta name="keywords" content="3D-to-3D, exemplar-based, diffusion prior">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThemeStation: Generating Theme-Aware 3D Assets from Few Exemplars</title>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./static/images/logo.png">
 </head>
+
 <body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    </div>
+  </nav>
 
 
   <section class="hero">
@@ -132,191 +139,190 @@
     </div>
   </section>
 
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser_1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser_2.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">ThemeStation</span> can generate a gallery of theme-consistent 3D assets from few
+          exemplars.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-single_1">
+            <div class="content has-text-centered">
+              <video poster="" id="single_1" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/single_1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="item item-single_2">
+            <div class="content has-text-centered">
+              <video poster="" id="single_2" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/single_2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="item item-single_3">
+            <div class="content has-text-centered">
+              <video poster="" id="single_3" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/single_3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="item item-group_1">
+            <div class="content has-text-centered">
+              <video poster="" id="group_1" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/group_1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="item item-group_2">
+            <div class="content has-text-centered">
+              <video poster="" id="group_2" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/group_2.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Real-world applications often require a large gallery of 3D assets that share a consistent theme. While
+              remarkable advances have been made in general 3D content creation from text or image, synthesizing
+              customized 3D assets following the shared theme of input 3D exemplars remains an open and challenging
+              problem. In this work, we present <span class="dnerf">ThemeStation</span>, a novel approach for
+              theme-aware 3D-to-3D generation. <span class="dnerf">ThemeStation</span> synthesizes customized 3D assets
+              based on given few exemplars with two goals: 1) unity for generating 3D assets that thematically align
+              with the given exemplars and 2) diversity for generating 3D assets with a high degree of variations. To
+              this end, we design a two-stage framework that draws a concept image first, followed by a
+              reference-informed 3D modeling stage. We propose a novel dual score distillation (DSD) loss to jointly
+              leverage priors from both the input exemplars and the synthesized concept image. Extensive experiments and
+              user studies confirm that <span class="dnerf">ThemeStation</span> surpasses prior works in producing
+              diverse theme-aware 3D models with impressive quality. <span class="dnerf">ThemeStation</span> also
+              enables various applications such as controllable 3D-to-3D generation.
+            </p>
+          </div>
         </div>
       </div>
+      <!--/ Abstract. -->
     </div>
-  </div>
-</section>
-<!-- End video carousel -->
+  </section>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Approach Overview</h2>
+          <div class="content has-text-justified">
+            <div>
+              <img src="./static/images/overview.png" alt="method" class="center">
+            </div>
+            <p>
+              Given just one (this figure) or a few reference models (exemplars), our approach can generate
+              theme-consistent 3D models in two stages. In the first stage, we fine-tune a pre-trained text-to-image
+              diffusion model to form a customized theme-driven diffusion model that produces various concept images. In
+              the second stage, we conduct reference-informed 3D asset modeling by progressively optimizing a rough
+              initial model (omitted in this figure for brevity), which is obtained using an off-the-shelf image-to-3D
+              method given the concept image, into an exquisite generated model. We use a novel dual score distillation
+              (DSD) loss for optimization, which applies concept prior and reference prior at different noise levels
+              (denoising timesteps).
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Controllable 3D-to-3D</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">ThemeStation</span> supports the application of controllable 3D-to-3D generation given
+              user-specified text prompts, demonstrating the immense potential of <span
+                class="dnerf">ThemeStation</span> to be seamlessly combined with emerging controllable image generation
+              techniques for more interesting 3D-to-3D application.
+            </p>
+          </div>
+          <video poster="" id="" autoplay muted loop height="100%">
+            <source src="./static/videos/application.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Demo Video</h2>
+          <video poster="" id="" autoplay muted controls loop height="100%">
+            <source src="./static/videos/demo.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{wang2024themestation,
+        title={ThemeStation: Generating Theme-Aware 3D Assets from Few Exemplars}, 
+        author={Zhenwei Wang and Tengfei Wang and Gerhard Hancke and Ziwei Liu and Rynson W.H. Lau},
+        booktitle={ACM SIGGRAPH},
+        year={2024}
+  }</code></pre>
+    </div>
+  </section>
 
-    <!-- End of Statcounter Code -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is powered by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We thank
+              the authors for sharing the templates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  </body>
-  </html>
+</body>
+
+</html>
