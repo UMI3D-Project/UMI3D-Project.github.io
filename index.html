@@ -138,17 +138,56 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/video/teaser.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        StyleSculptor is an zero-shot style-guided image-to-3D generation model for various style controls, including geometry-only, texture-only, and texture-geometry dual guided generation.
       </h2>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
 
+<section id='sec-sidebyside-edit' class="hero is-light is-small">
+  <div class="hero-body">
+
+    <div class="container"  style="padding-left: 5%; padding-right: 5%;">
+      <!-- <h2 class="has-text-centered title">
+          <b>Video editing</b>
+      </h2> -->
+      <div id="sidebyside-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" autoplay muted loop playsinline height="100%">
+              <source src="static/video/dual1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop playsinline height="100%">
+              <source src="static/video/dual2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop playsinline height="100%">
+              <source src="static/video/dual3.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+      </div>
+      
+    </div>
+    <h2 class="title has-text-centered is-size-3" style="font-weight: 1000; line-height: 32px;  padding-top: 20px;">
+      Dual-Style Guided 3D Generation
+    </h2>
+  </div>
+</section>
+<br>
+<br>
+
+  
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -157,7 +196,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Creating 3D assets that follow the texture and geometry style of existing ones is often desirable or even inevitable in practical applications like video gaming and virtual reality. While impressive progress has been made in generating 3D objects from text or images, creating style-controllable 3D assets remains a complex and challenging problem. In this work, we propose StyleSculptor, a novel training-free approach for generating style-guided 3D assets from a content image and one or more style images. Unlike previous works, StyleSculptor achieves style-guided 3D generation in a zero-shot manner, enabling fine-grained 3D style control that captures the texture, geometry, or both styles of user-provided style images. At the core of StyleSculptor is a novel Style Disentangled Attention (SD-Attn) module, which establishes a dynamic interaction between the input content image and style image for style-guided 3D asset generation via a cross-3D attention mechanism}, enabling stable feature fusion and effective style-guided generation. To alleviate semantic content leakage, we also introduce a style-disentangled feature selection strategy within the SD-Attn module, which leverages the variance of 3D feature patches to disentangle style- and content-significant channels, allowing selective feature injection within the attention framework. With SD-Attn, the network can dynamically compute texture-, geometry-, or both-guided features to steer the 3D generation process. Built upon this, we further propose the Style Guided Control (SGC) mechanism, which enables exclusive geometry- or texture-only stylization, as well as adjustable style intensity control. StyleSculptor does not require prior training and enables instant adaptation to any reference models while maintaining strict user-specified style consistency. Extensive experiments demonstrate that StyleSculptor outperforms existing baseline methods in producing high-fidelity 3D assets.
           </p>
         </div>
       </div>
