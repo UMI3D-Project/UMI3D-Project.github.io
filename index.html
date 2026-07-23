@@ -121,11 +121,11 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/video/teaser.mp4"
+        <source src="static/video/Teasor.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        StyleSculptor is an zero-shot style-guided image-to-3D generation model for various style controls, including geometry-only, texture-only, and texture-geometry dual guided generation.
+        UMI3D is a training-free robust image-to-3D generation pipeline for unconstrained multi-input. It also supports multiple applications like multi-view generation enhancement, 3D morphing, and single-view local refinement.
       </h2>
     </div>
   </div>
@@ -140,24 +140,24 @@
           <b>Video editing</b>
       </h2> -->
       <h2 class="title has-text-centered is-size-3" style="font-weight: 1000; line-height: 32px;  padding-top: 20px;">
-      Dual-Style Guided 3D Generation
+      3D Generation with Unconstrained Multi-Image Input
     </h2>
       <div id="sidebyside-carousel-1" class="carousel results-carousel">
           <div class="item">
             <video poster="" autoplay muted loop playsinline height="100%">
-              <source src="static/video/dual1.mp4"
+              <source src="static/video/uncon1.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop playsinline height="100%">
-              <source src="static/video/dual2.mp4"
+              <source src="static/video/uncon2.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop playsinline height="100%">
-              <source src="static/video/dual3.mp4"
+              <source src="static/video/uncon3.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -177,12 +177,12 @@
   <div class="hero-body">
     <div class="container" style="padding-left: 5%; padding-right: 5%;">
       <h2 class="title has-text-centered is-size-3" style="font-weight: 1000; line-height: 32px; padding-top: 20px;">
-      Texture Guided 3D Generation
+      Multi-View 3D Generation Enhancement
     </h2>
       <!-- 直接放置视频 -->
       <div class="has-text-centered"> <!-- 可选：用于居中视频 -->
         <video poster="" autoplay muted loop playsinline height="100%">
-          <source src="static/video/texture_only.mp4" type="video/mp4">
+          <source src="static/video/mv.mp4" type="video/mp4">
           <!-- 可以添加备用文本 -->
           Your browser does not support the video tag.
         </video>
@@ -201,11 +201,11 @@
     <div class="container" style="padding-left: 5%; padding-right: 5%;">
       <!-- 直接放置视频 -->
       <h2 class="title has-text-centered is-size-3" style="font-weight: 1000; line-height: 32px; padding-top: 20px;">
-      Geometry Guided 3D Generation
+      3D Morphing between Images
     </h2>
       <div class="has-text-centered">
         <video poster="" autoplay muted loop playsinline height="100%">
-          <source src="static/video/geometry.mp4" type="video/mp4">
+          <source src="static/video/morph.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -222,12 +222,12 @@
   <div class="hero-body">
     <div class="container" style="padding-left: 5%; padding-right: 5%;">
       <h2 class="title has-text-centered is-size-3" style="font-weight: 1000; line-height: 32px; padding-top: 20px;">
-      3D Asset Style Transfer
+      Single-View 3D Generation Local Enhancement
     </h2>
       <!-- 直接放置视频 -->
       <div class="has-text-centered">
         <video poster="" autoplay muted loop playsinline height="100%">
-          <source src="static/video/3dsty.mp4" type="video/mp4">
+          <source src="static/video/sv.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -247,7 +247,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Creating 3D assets that follow the texture and geometry style of existing ones is often desirable or even inevitable in practical applications like video gaming and virtual reality. While impressive progress has been made in generating 3D objects from text or images, creating style-controllable 3D assets remains a complex and challenging problem. In this work, we propose StyleSculptor, a novel training-free approach for generating style-guided 3D assets from a content image and one or more style images. Unlike previous works, StyleSculptor achieves style-guided 3D generation in a zero-shot manner, enabling fine-grained 3D style control that captures the texture, geometry, or both styles of user-provided style images. At the core of StyleSculptor is a novel Style Disentangled Attention (SD-Attn) module, which establishes a dynamic interaction between the input content image and style image for style-guided 3D asset generation via a cross-3D attention mechanism}, enabling stable feature fusion and effective style-guided generation. To alleviate semantic content leakage, we also introduce a style-disentangled feature selection strategy within the SD-Attn module, which leverages the variance of 3D feature patches to disentangle style- and content-significant channels, allowing selective feature injection within the attention framework. With SD-Attn, the network can dynamically compute texture-, geometry-, or both-guided features to steer the 3D generation process. Built upon this, we further propose the Style Guided Control (SGC) mechanism, which enables exclusive geometry- or texture-only stylization, as well as adjustable style intensity control. StyleSculptor does not require prior training and enables instant adaptation to any reference models while maintaining strict user-specified style consistency. Extensive experiments demonstrate that StyleSculptor outperforms existing baseline methods in producing high-fidelity 3D assets.
+            Recent 3D foundation models can generate high-quality assets from a single image, but degrade markedly on unconstrained multi-image inputs, often producing distorted geometry, over-smoothed textures, and chaotic colors. We argue that this failure stems not from limited model capacity, but from a mismatch between single-image cross-attention and the multi-image setting: existing models lack a principled way to decide which image each 3D voxel should trust at each denoising step. Revisiting recent single-image 3D foundation models, we show that explicitly routing each voxel to its most informative image is sufficient to unlock strong performance on inconsistent multi-image inputs. Based on this observation, we propose UMI3D, a training-free and plug-and-play framework that restructures cross-attention for unconstrained multi-image 3D generation. Its core, \textit{Simultaneous Focus Cross-Attention} (SFC-Attn), activates all conditioning images at each denoising step while allowing each voxel to focus on the single image that best explains it. To enable this routing, we derive the Voxel Reference Score (VRS), a model-intrinsic metric for voxel--image affinity that requires no external matching, segmentation, or correspondence models. Extensive experiments show that UMI3D unlocks the multi-image potential of single-image 3D generation frameworks across diverse tasks.
           </p>
         </div>
       </div>
